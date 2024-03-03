@@ -1,24 +1,168 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AVY-9S-E4Y">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="calculatorplus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ofz-g0-F38" userLabel="MoneyButton">
+                                <rect key="frame" x="179" y="783" width="56" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="0hx-Qo-qrg"/>
+                                    <constraint firstAttribute="width" constant="56" id="yUX-VI-DxB"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" cornerStyle="fixed">
+                                    <imageReference key="image" image="square.and.arrow.down.fill" catalog="system" symbolScale="large"/>
+                                    <backgroundConfiguration key="background" cornerRadius="16">
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TlU-IO-MFr" userLabel="ConvertButton">
+                                <rect key="frame" x="94" y="783" width="56" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="TMF-pz-op8"/>
+                                    <constraint firstAttribute="width" constant="56" id="lwA-oo-Yi9"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" cornerStyle="fixed">
+                                    <imageReference key="image" image="square.and.arrow.up.circle" catalog="system" symbolScale="large"/>
+                                    <backgroundConfiguration key="background" cornerRadius="16" strokeWidth="24">
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cq-Y9-HNQ" userLabel="SecondButton">
+                                <rect key="frame" x="334" y="783" width="56" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="2dc-Yj-3Sr"/>
+                                    <constraint firstAttribute="width" constant="56" id="Eod-aQ-fk3"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="rectangle.portrait.and.arrow.right.fill" catalog="system" cornerStyle="fixed">
+                                    <backgroundConfiguration key="background" cornerRadius="16" strokeWidth="24">
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="ButtonMoney" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJ9-3z-piX" userLabel="CalculatorButton">
+                                <rect key="frame" x="24" y="783" width="56" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="08H-Bg-f3T"/>
+                                    <constraint firstAttribute="height" constant="56" id="nMh-qa-ofa"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" cornerStyle="fixed">
+                                    <imageReference key="image" image="square.and.arrow.up" catalog="system" symbolScale="large"/>
+                                    <backgroundConfiguration key="background" cornerRadius="16" strokeWidth="24">
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xol-bh-dKL" userLabel="FirstButton">
+                                <rect key="frame" x="249" y="783" width="56" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="Ehq-xt-kfw"/>
+                                    <constraint firstAttribute="width" constant="56" id="USi-Mm-jxQ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.down.fill" catalog="system" cornerStyle="fixed">
+                                    <backgroundConfiguration key="background" cornerRadius="16" strokeWidth="24">
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                    </backgroundConfiguration>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ofz-g0-F38" firstAttribute="height" secondItem="BJ9-3z-piX" secondAttribute="height" id="6iU-R4-tMl"/>
+                            <constraint firstItem="Ofz-g0-F38" firstAttribute="width" secondItem="BJ9-3z-piX" secondAttribute="width" id="8XF-sr-ZLC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TlU-IO-MFr" secondAttribute="bottom" constant="48" id="9Zh-i0-DqG"/>
+                            <constraint firstItem="xol-bh-dKL" firstAttribute="width" secondItem="BJ9-3z-piX" secondAttribute="width" id="Dep-Do-qVQ"/>
+                            <constraint firstItem="xol-bh-dKL" firstAttribute="top" secondItem="Ofz-g0-F38" secondAttribute="top" id="Lv5-AK-QXU"/>
+                            <constraint firstItem="BJ9-3z-piX" firstAttribute="baseline" secondItem="Ofz-g0-F38" secondAttribute="firstBaseline" id="RJ0-MB-0L6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BJ9-3z-piX" secondAttribute="bottom" constant="48" id="RU8-iQ-OjM"/>
+                            <constraint firstItem="TlU-IO-MFr" firstAttribute="height" secondItem="BJ9-3z-piX" secondAttribute="height" id="Six-8d-Qtj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xol-bh-dKL" secondAttribute="bottom" constant="48" id="UJf-V1-ELu"/>
+                            <constraint firstItem="Ofz-g0-F38" firstAttribute="width" secondItem="BJ9-3z-piX" secondAttribute="width" id="VUh-Mg-02b"/>
+                            <constraint firstItem="xol-bh-dKL" firstAttribute="leading" secondItem="Ofz-g0-F38" secondAttribute="trailing" constant="14" id="Wgl-I8-O80"/>
+                            <constraint firstItem="2cq-Y9-HNQ" firstAttribute="height" secondItem="BJ9-3z-piX" secondAttribute="height" id="Yuh-dO-Lcq"/>
+                            <constraint firstItem="2cq-Y9-HNQ" firstAttribute="height" secondItem="BJ9-3z-piX" secondAttribute="height" id="Z0f-Cf-MZu"/>
+                            <constraint firstItem="Ofz-g0-F38" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zi2-Rk-8XT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ofz-g0-F38" secondAttribute="bottom" constant="48" id="aKF-kJ-mEq"/>
+                            <constraint firstItem="2cq-Y9-HNQ" firstAttribute="width" secondItem="BJ9-3z-piX" secondAttribute="width" id="bel-Zg-Kk9"/>
+                            <constraint firstItem="xol-bh-dKL" firstAttribute="height" secondItem="BJ9-3z-piX" secondAttribute="height" id="bkh-mu-CbZ"/>
+                            <constraint firstItem="TlU-IO-MFr" firstAttribute="width" secondItem="BJ9-3z-piX" secondAttribute="width" id="fan-rx-a2B"/>
+                            <constraint firstItem="TlU-IO-MFr" firstAttribute="leading" secondItem="BJ9-3z-piX" secondAttribute="trailing" constant="14" id="gO4-y6-LGn"/>
+                            <constraint firstItem="TlU-IO-MFr" firstAttribute="height" secondItem="BJ9-3z-piX" secondAttribute="height" id="gxA-AF-VZe"/>
+                            <constraint firstItem="TlU-IO-MFr" firstAttribute="width" secondItem="BJ9-3z-piX" secondAttribute="width" id="h7R-w5-wTu"/>
+                            <constraint firstItem="2cq-Y9-HNQ" firstAttribute="width" secondItem="BJ9-3z-piX" secondAttribute="width" id="k3n-xs-8me"/>
+                            <constraint firstItem="xol-bh-dKL" firstAttribute="width" secondItem="BJ9-3z-piX" secondAttribute="width" id="nKF-NP-hH4"/>
+                            <constraint firstItem="TlU-IO-MFr" firstAttribute="width" secondItem="BJ9-3z-piX" secondAttribute="width" id="sj2-cj-Zwv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2cq-Y9-HNQ" secondAttribute="trailing" constant="24" id="su8-9h-Cc1"/>
+                            <constraint firstItem="xol-bh-dKL" firstAttribute="height" secondItem="BJ9-3z-piX" secondAttribute="height" id="tJx-Qz-EnI"/>
+                            <constraint firstItem="BJ9-3z-piX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="ucB-I0-xGZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2cq-Y9-HNQ" secondAttribute="bottom" constant="48" id="wUO-wT-P4U"/>
+                            <constraint firstItem="xol-bh-dKL" firstAttribute="width" secondItem="BJ9-3z-piX" secondAttribute="width" id="wkW-N9-viU"/>
+                            <constraint firstItem="Ofz-g0-F38" firstAttribute="height" secondItem="BJ9-3z-piX" secondAttribute="height" id="yUZ-US-ZCW"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="btU-rf-wQe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="813.04347826086962" y="83.705357142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dqC-w6-dwh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AVY-9S-E4Y" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="l6i-4z-KWV">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="SAq-8e-wCp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pa1-eB-Yp9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="83.705357142857139"/>
         </scene>
     </scenes>
+    <color key="tintColor" systemColor="linkColor"/>
+    <resources>
+        <image name="rectangle.portrait.and.arrow.right.fill" catalog="system" width="128" height="108"/>
+        <image name="square.and.arrow.down.fill" catalog="system" width="121" height="128"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="square.and.arrow.up.circle" catalog="system" width="128" height="121"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -16,6 +16,8 @@
 		200735E52B90C04800C6FC71 /* calculatorplusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200735E42B90C04800C6FC71 /* calculatorplusTests.swift */; };
 		200735EF2B90C04800C6FC71 /* calculatorplusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200735EE2B90C04800C6FC71 /* calculatorplusUITests.swift */; };
 		200735F12B90C04800C6FC71 /* calculatorplusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200735F02B90C04800C6FC71 /* calculatorplusUITestsLaunchTests.swift */; };
+		201D897C2B94B4AC009C9C16 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D897B2B94B4AC009C9C16 /* CalculatorViewController.swift */; };
+		201D897E2B94B4E1009C9C16 /* CalculatorView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 201D897D2B94B4E1009C9C16 /* CalculatorView.storyboard */; };
 		34C31C9DB939033A1680A33F /* Pods_calculatorplus_calculatorplusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD303CE139CD4813F12BEE61 /* Pods_calculatorplus_calculatorplusUITests.framework */; };
 		7F9F4E55262C7D8FB11CEDE0 /* Pods_calculatorplus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C707A59CDC708DFE83CE7710 /* Pods_calculatorplus.framework */; };
 		F4FEACCCA51D1E1087ECBBE5 /* Pods_calculatorplusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD56F495097BDDC2AC2CCC3D /* Pods_calculatorplusTests.framework */; };
@@ -52,6 +54,8 @@
 		200735EA2B90C04800C6FC71 /* calculatorplusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = calculatorplusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		200735EE2B90C04800C6FC71 /* calculatorplusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculatorplusUITests.swift; sourceTree = "<group>"; };
 		200735F02B90C04800C6FC71 /* calculatorplusUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculatorplusUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		201D897B2B94B4AC009C9C16 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		201D897D2B94B4E1009C9C16 /* CalculatorView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CalculatorView.storyboard; sourceTree = "<group>"; };
 		4F58640A7E9844B82EB41401 /* Pods-calculatorplus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calculatorplus.debug.xcconfig"; path = "Target Support Files/Pods-calculatorplus/Pods-calculatorplus.debug.xcconfig"; sourceTree = "<group>"; };
 		52A7696C0F38B13F1983BFD7 /* Pods-calculatorplus-calculatorplusUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calculatorplus-calculatorplusUITests.release.xcconfig"; path = "Target Support Files/Pods-calculatorplus-calculatorplusUITests/Pods-calculatorplus-calculatorplusUITests.release.xcconfig"; sourceTree = "<group>"; };
 		66DC927C1181176192538055 /* Pods-calculatorplusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calculatorplusTests.debug.xcconfig"; path = "Target Support Files/Pods-calculatorplusTests/Pods-calculatorplusTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 				200735D62B90C04800C6FC71 /* Assets.xcassets */,
 				200735D82B90C04800C6FC71 /* LaunchScreen.storyboard */,
 				200735DB2B90C04800C6FC71 /* Info.plist */,
+				201D897B2B94B4AC009C9C16 /* CalculatorViewController.swift */,
+				201D897D2B94B4E1009C9C16 /* CalculatorView.storyboard */,
 			);
 			path = calculatorplus;
 			sourceTree = "<group>";
@@ -164,7 +170,6 @@
 				66DC927C1181176192538055 /* Pods-calculatorplusTests.debug.xcconfig */,
 				DBEF2E14AB817B6A34681428 /* Pods-calculatorplusTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -276,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				200735DA2B90C04800C6FC71 /* LaunchScreen.storyboard in Resources */,
+				201D897E2B94B4E1009C9C16 /* CalculatorView.storyboard in Resources */,
 				200735D72B90C04800C6FC71 /* Assets.xcassets in Resources */,
 				200735D52B90C04700C6FC71 /* Main.storyboard in Resources */,
 			);
@@ -373,6 +379,7 @@
 			files = (
 				200735D22B90C04700C6FC71 /* ViewController.swift in Sources */,
 				200735CE2B90C04700C6FC71 /* AppDelegate.swift in Sources */,
+				201D897C2B94B4AC009C9C16 /* CalculatorViewController.swift in Sources */,
 				200735D02B90C04700C6FC71 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -560,6 +567,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -590,6 +598,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

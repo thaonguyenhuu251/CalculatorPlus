@@ -11,7 +11,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+//        let mainStoryboard = UIStoryboard(name: "CalculatorView", bundle: nil)
+//        let calculatorView = mainStoryboard.instantiateViewController(withIdentifier: "CalculatorView") as! CalculatorViewController
+//        navigationController?.pushViewController(calculatorView, animated: true)
+
     }
 
 
