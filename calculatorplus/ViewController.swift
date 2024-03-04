@@ -11,12 +11,21 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let mainStoryboard = UIStoryboard(name: "CalculatorView", bundle: nil)
-//        let calculatorView = mainStoryboard.instantiateViewController(withIdentifier: "CalculatorView") as! CalculatorViewController
-//        navigationController?.pushViewController(calculatorView, animated: true)
 
     }
 
-
+    @IBAction func buttonMath(_ sender: Any) {
+        let mainStoryboard = UIStoryboard(name: "CalculatorView", bundle: nil)
+        let calculatorView = mainStoryboard.instantiateViewController(withIdentifier: "CalculatorView") as! CalculatorViewController
+        navigationController?.pushViewController(calculatorView, animated: true)
+    }
+    
+    @IBAction func buttonConvert(_ sender: Any) {
+        
+    }
+    
+    @IBAction func buttonMoney(_ sender: Any) {
+    }
+    
 }
 
