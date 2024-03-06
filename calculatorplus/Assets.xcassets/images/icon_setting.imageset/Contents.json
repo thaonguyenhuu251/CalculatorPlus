@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Group.png",
+      "filename" : "icon_setting.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Group 1.png",
+      "filename" : "SVGRepo_iconCarrier 12png.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Group 2.png",
+      "filename" : "SVGRepo_iconCarrier 3.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,16 +14,34 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="calculatorplus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController keyboardType="off" id="BYZ-38-t0r" customClass="ViewController" customModule="calculatorplus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_science" translatesAutoresizingMaskIntoConstraints="NO" id="Jn5-eI-jUO">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="409" height="852"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="pmt-D1-BiZ">
-                                <rect key="frame" x="9.6666666666666572" y="740" width="374" height="62"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMZ-Lu-Dv8" userLabel="SettingButton">
+                                <rect key="frame" x="341" y="56" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="fNY-xh-92A"/>
+                                    <constraint firstAttribute="width" constant="36" id="ymz-FL-IBD"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="icon_setting"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E53-ib-VoC" userLabel="MenuButton">
+                                <rect key="frame" x="16" y="56" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="SyD-Gu-e3A"/>
+                                    <constraint firstAttribute="height" constant="36" id="iSV-VC-7Rb"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="icon_menu"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pmt-D1-BiZ">
+                                <rect key="frame" x="16" y="740" width="361" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJ9-3z-piX" userLabel="CalculatorButton">
                                         <rect key="frame" x="0.0" y="0.0" width="62" height="62"/>
@@ -35,8 +54,8 @@
                                         <inset key="titleEdgeInsets" minX="16" minY="16" maxX="16" maxY="16"/>
                                         <inset key="imageEdgeInsets" minX="16" minY="16" maxX="16" maxY="16"/>
                                         <state key="normal" backgroundImage="icon_calculator"/>
-                                        <buttonConfiguration key="configuration" style="plain">
-                                            <backgroundConfiguration key="background" image="icon_calculator" imageContentMode="scaleAspectFit">
+                                        <buttonConfiguration key="configuration" style="plain" image="icon_calculator">
+                                            <backgroundConfiguration key="background" cornerRadius="16">
                                                 <color key="backgroundColor" name="medium_turquoise"/>
                                             </backgroundConfiguration>
                                             <directionalEdgeInsets key="contentInsets" top="16" leading="16" bottom="16" trailing="16"/>
@@ -46,20 +65,24 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TlU-IO-MFr" userLabel="ConvertButton">
-                                        <rect key="frame" x="78" y="0.0" width="62" height="62"/>
+                                        <rect key="frame" x="74.666666666666671" y="0.0" width="62.000000000000014" height="62"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="62" id="GsX-XH-U66"/>
                                             <constraint firstAttribute="height" constant="62" id="tRe-Cq-Zeu"/>
                                         </constraints>
-                                        <color key="tintColor" name="medium_turquoise"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" backgroundImage="icon_calculator"/>
+                                        <state key="normal" image="icon_calculator"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="icon_convert">
+                                            <backgroundConfiguration key="background" cornerRadius="16">
+                                                <color key="backgroundColor" name="medium_turquoise"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="buttonConvert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aTo-ct-De6"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xol-bh-dKL" userLabel="FirstButton">
-                                        <rect key="frame" x="156" y="0.0" width="62" height="62"/>
+                                        <rect key="frame" x="149.66666666666666" y="0.0" width="62" height="62"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="62" id="QUa-it-NPe"/>
                                             <constraint firstAttribute="height" constant="62" id="Vef-mT-G1m"/>
@@ -67,58 +90,85 @@
                                         <color key="tintColor" name="medium_turquoise"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" backgroundImage="icon_money"/>
-                                        <buttonConfiguration key="configuration" style="plain">
-                                            <backgroundConfiguration key="background" cornerRadius="16" image="icon_money" imageContentMode="scaleAspectFit">
+                                        <buttonConfiguration key="configuration" style="plain" image="icon_money">
+                                            <backgroundConfiguration key="background" cornerRadius="16">
                                                 <color key="backgroundColor" name="medium_turquoise"/>
                                             </backgroundConfiguration>
                                             <directionalEdgeInsets key="contentInsets" top="16" leading="16" bottom="16" trailing="16"/>
                                         </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ofz-g0-F38" userLabel="MoneyButton">
-                                        <rect key="frame" x="234" y="0.0" width="62" height="62"/>
+                                        <rect key="frame" x="224.33333333333334" y="0.0" width="62.000000000000028" height="62"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="62" id="AHG-6T-cIJ"/>
                                             <constraint firstAttribute="width" constant="62" id="uOp-6a-qyS"/>
                                         </constraints>
-                                        <color key="tintColor" name="medium_turquoise"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" backgroundImage="icon_calculator"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="icon_add">
+                                            <backgroundConfiguration key="background" cornerRadius="16">
+                                                <color key="backgroundColor" name="medium_turquoise"/>
+                                            </backgroundConfiguration>
+                                            <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="buttonMoney:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EMD-NE-v8Q"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cq-Y9-HNQ" userLabel="SecondButton">
-                                        <rect key="frame" x="312" y="0.0" width="62" height="62"/>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cq-Y9-HNQ" userLabel="SecondButton">
+                                        <rect key="frame" x="299" y="0.0" width="62" height="62"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="62" id="3Fd-8F-FNN"/>
                                             <constraint firstAttribute="width" constant="62" id="z3x-5v-EPq"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="icon_calculator"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="icon_add">
+                                            <backgroundConfiguration key="background" cornerRadius="16">
+                                                <color key="backgroundColor" name="medium_turquoise"/>
+                                            </backgroundConfiguration>
+                                            <directionalEdgeInsets key="contentInsets" top="4" leading="4" bottom="4" trailing="4"/>
+                                        </buttonConfiguration>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQn-wZ-MIY">
-                                <rect key="frame" x="16" y="127" width="361" height="589"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQn-wZ-MIY" customClass="RoundedCornerView" customModule="calculatorplus" customModuleProvider="target">
+                                <rect key="frame" x="16" y="108" width="361" height="608"/>
                                 <color key="backgroundColor" name="medium_turquoise"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="E53-ib-VoC" firstAttribute="top" secondItem="Jn5-eI-jUO" secondAttribute="top" constant="56" id="3tj-ek-kf0"/>
                             <constraint firstAttribute="bottom" secondItem="Jn5-eI-jUO" secondAttribute="bottom" id="INh-6x-r82"/>
                             <constraint firstItem="gQn-wZ-MIY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="bK3-Tv-Foi"/>
+                            <constraint firstItem="E53-ib-VoC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="cFA-Nl-zWM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pmt-D1-BiZ" secondAttribute="bottom" constant="16" id="dUl-bk-koE"/>
-                            <constraint firstItem="pmt-D1-BiZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dxA-fI-7Ol"/>
-                            <constraint firstItem="gQn-wZ-MIY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="dxf-nt-ekX"/>
+                            <constraint firstItem="gQn-wZ-MIY" firstAttribute="top" secondItem="EMZ-Lu-Dv8" secondAttribute="bottom" constant="16" id="dxf-nt-ekX"/>
                             <constraint firstItem="Jn5-eI-jUO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fWz-dS-mjI"/>
                             <constraint firstItem="pmt-D1-BiZ" firstAttribute="top" secondItem="gQn-wZ-MIY" secondAttribute="bottom" constant="24" id="gyK-Hd-woA"/>
-                            <constraint firstItem="Jn5-eI-jUO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mMP-Ya-dgM"/>
+                            <constraint firstItem="Jn5-eI-jUO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="16" id="mMP-Ya-dgM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pmt-D1-BiZ" secondAttribute="trailing" constant="16" id="mP3-u0-GvN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gQn-wZ-MIY" secondAttribute="trailing" constant="16" id="ooi-pm-GxW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EMZ-Lu-Dv8" secondAttribute="trailing" constant="16" id="oom-cY-07u"/>
+                            <constraint firstItem="pmt-D1-BiZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="qKI-wL-GQe"/>
+                            <constraint firstItem="EMZ-Lu-Dv8" firstAttribute="top" secondItem="Jn5-eI-jUO" secondAttribute="top" constant="56" id="rPJ-8U-5Kn"/>
                             <constraint firstItem="Jn5-eI-jUO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uTI-yF-w0s"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="btU-rf-wQe"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="btU-rf-wQe"/>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -146,10 +196,14 @@
     <color key="tintColor" systemColor="linkColor"/>
     <resources>
         <image name="background_science" width="1080" height="1920"/>
-        <image name="icon_calculator" width="266.66665649414062" height="266.66665649414062"/>
-        <image name="icon_money" width="800" height="800"/>
+        <image name="icon_add" width="48" height="48"/>
+        <image name="icon_calculator" width="48" height="48"/>
+        <image name="icon_convert" width="48" height="48"/>
+        <image name="icon_menu" width="48" height="48"/>
+        <image name="icon_money" width="48" height="48"/>
+        <image name="icon_setting" width="48" height="48"/>
         <namedColor name="medium_turquoise">
-            <color red="0.20899999999999999" green="0.20499999999999999" blue="0.20499999999999999" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20900000631809235" green="0.20499999821186066" blue="0.20499999821186066" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

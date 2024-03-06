@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Group.png",
+      "filename" : "ic_menu.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Group 1.png",
+      "filename" : "menu-alt-01-svgrepo-com 2 2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Group 2.png",
+      "filename" : "menu-alt-01-svgrepo-com 2 3.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
