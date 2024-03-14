@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hAF-wY-Ty5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hAF-wY-Ty5">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
@@ -78,6 +78,9 @@
                                             </backgroundConfiguration>
                                             <directionalEdgeInsets key="contentInsets" top="16" leading="16" bottom="16" trailing="16"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="buttonMoney:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I7l-WD-iqh"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ofz-g0-F38" userLabel="MoneyButton">
                                         <rect key="frame" x="224.33333333333334" y="0.0" width="62.000000000000028" height="62"/>
@@ -92,9 +95,6 @@
                                             </backgroundConfiguration>
                                             <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
                                         </buttonConfiguration>
-                                        <connections>
-                                            <action selector="buttonMoney:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EMD-NE-v8Q"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cq-Y9-HNQ" userLabel="SecondButton">
                                         <rect key="frame" x="299" y="0.0" width="62" height="62"/>
@@ -114,7 +114,7 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQn-wZ-MIY" customClass="RoundedCornerView" customModule="calculatorplus" customModuleProvider="target">
-                                <rect key="frame" x="16" y="103" width="361" height="613"/>
+                                <rect key="frame" x="16" y="107" width="361" height="609"/>
                                 <color key="backgroundColor" name="medium_turquoise"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -128,11 +128,21 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqk-1Z-iwK">
+                                <rect key="frame" x="16" y="59" width="36" height="36"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="icon_menu"/>
+                                <connections>
+                                    <action selector="buttonSide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GbW-9w-mxa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Jn5-eI-jUO" secondAttribute="bottom" id="INh-6x-r82"/>
+                            <constraint firstItem="jqk-1Z-iwK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="U1Q-ca-Owa"/>
+                            <constraint firstItem="jqk-1Z-iwK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="a7T-yL-byb"/>
                             <constraint firstItem="gQn-wZ-MIY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="bK3-Tv-Foi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pmt-D1-BiZ" secondAttribute="bottom" constant="16" id="dUl-bk-koE"/>
                             <constraint firstItem="Jn5-eI-jUO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fWz-dS-mjI"/>
@@ -142,7 +152,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gQn-wZ-MIY" secondAttribute="trailing" constant="16" id="ooi-pm-GxW"/>
                             <constraint firstItem="pmt-D1-BiZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="qKI-wL-GQe"/>
                             <constraint firstItem="Jn5-eI-jUO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uTI-yF-w0s"/>
-                            <constraint firstItem="gQn-wZ-MIY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="yy7-Dq-dm6"/>
+                            <constraint firstItem="gQn-wZ-MIY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="48" id="yy7-Dq-dm6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="btU-rf-wQe">
@@ -154,6 +164,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="buttonSideMenu" destination="jqk-1Z-iwK" id="y8n-bG-Rim"/>
                         <outlet property="sideMenuBtn" destination="FVD-tF-2Fg" id="PW5-VM-noO"/>
                     </connections>
                 </viewController>
@@ -169,7 +180,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="rDr-Kb-hlI"/>
-                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="IsY-19-zx4">
@@ -279,11 +290,12 @@
         <!--Navigation Controller-->
         <scene sceneID="pwk-yp-9g1">
             <objects>
-                <navigationController storyboardIdentifier="HomeNavID" automaticallyAdjustsScrollViewInsets="NO" id="F8i-SY-tR6" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomeNavID" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="F8i-SY-tR6" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="H7F-Dc-QWm">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="compactAppearance"/>
+                        <navigationBarAppearance key="scrollEdgeAppearance"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -295,7 +307,7 @@
             <point key="canvasLocation" x="627" y="-413"/>
         </scene>
     </scenes>
-    <color key="tintColor" systemColor="linkColor"/>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="background_science" width="1080" height="1920"/>
         <image name="clear" catalog="system" width="128" height="114"/>
@@ -307,19 +319,13 @@
         <image name="icon_money" width="48" height="48"/>
         <image name="icon_setting" width="24" height="24"/>
         <namedColor name="medium_turquoise">
-            <color red="0.20900000631809235" green="0.20499999821186066" blue="0.20499999821186066" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20900000631809235" green="0.20499999821186066" blue="0.20499999821186066" alpha="0.60000002384185791" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

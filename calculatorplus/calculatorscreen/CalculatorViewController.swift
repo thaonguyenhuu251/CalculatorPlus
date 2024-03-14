@@ -25,7 +25,6 @@ class CalculatorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
     }
     
@@ -191,5 +190,8 @@ class CalculatorViewController: UIViewController {
     @IBAction func buttonResult(_ sender: Any) {
     }
     
+    @IBAction func buttonBack(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
     
 }

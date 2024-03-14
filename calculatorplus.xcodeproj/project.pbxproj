@@ -26,6 +26,18 @@
 		9A3CE72C2B999A53004CF55D /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3CE72B2B999A53004CF55D /* SideMenuCell.swift */; };
 		9A3CE7302B99A48A004CF55D /* SideMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A3CE72F2B99A48A004CF55D /* SideMenuCell.xib */; };
 		9A3CE7322B99AE8C004CF55D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3CE7312B99AE8C004CF55D /* MainViewController.swift */; };
+		9A569E7A2BA2A7FB00353EA2 /* ConvertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A569E792BA2A7FB00353EA2 /* ConvertViewController.swift */; };
+		9A569E7C2BA2A80B00353EA2 /* ConvertView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A569E7B2BA2A80B00353EA2 /* ConvertView.storyboard */; };
+		9A569E822BA2A98000353EA2 /* MoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A569E812BA2A98000353EA2 /* MoneyViewController.swift */; };
+		9A569E842BA2A98E00353EA2 /* MoneyView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A569E832BA2A98E00353EA2 /* MoneyView.storyboard */; };
+		9A569E892BA2B5B400353EA2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A569E882BA2B5B400353EA2 /* GoogleService-Info.plist */; };
+		9A569E8B2BA2E68500353EA2 /* GoogleService-Info .plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A569E8A2BA2E68500353EA2 /* GoogleService-Info .plist */; };
+		9A569E8E2BA2F30F00353EA2 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 9A569E8D2BA2F30F00353EA2 /* FirebaseAnalytics */; };
+		9A569E902BA2F30F00353EA2 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 9A569E8F2BA2F30F00353EA2 /* FirebaseAppCheck */; };
+		9A569E922BA2F30F00353EA2 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9A569E912BA2F30F00353EA2 /* FirebaseAuth */; };
+		9A569E942BA2F30F00353EA2 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 9A569E932BA2F30F00353EA2 /* FirebaseDatabase */; };
+		9A569E962BA2F30F00353EA2 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 9A569E952BA2F30F00353EA2 /* FirebaseFirestore */; };
+		9A569E982BA2F30F00353EA2 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 9A569E972BA2F30F00353EA2 /* FirebaseStorage */; };
 		9A5F5F302B99CEB0004DD91A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5F5F2F2B99CEB0004DD91A /* BaseViewController.swift */; };
 		F4FEACCCA51D1E1087ECBBE5 /* Pods_calculatorplusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD56F495097BDDC2AC2CCC3D /* Pods_calculatorplusTests.framework */; };
 /* End PBXBuildFile section */
@@ -74,6 +86,12 @@
 		9A3CE72B2B999A53004CF55D /* SideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
 		9A3CE72F2B99A48A004CF55D /* SideMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuCell.xib; sourceTree = "<group>"; };
 		9A3CE7312B99AE8C004CF55D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		9A569E792BA2A7FB00353EA2 /* ConvertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertViewController.swift; sourceTree = "<group>"; };
+		9A569E7B2BA2A80B00353EA2 /* ConvertView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConvertView.storyboard; sourceTree = "<group>"; };
+		9A569E812BA2A98000353EA2 /* MoneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyViewController.swift; sourceTree = "<group>"; };
+		9A569E832BA2A98E00353EA2 /* MoneyView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MoneyView.storyboard; sourceTree = "<group>"; };
+		9A569E882BA2B5B400353EA2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9A569E8A2BA2E68500353EA2 /* GoogleService-Info .plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info .plist"; sourceTree = "<group>"; };
 		9A5F5F2F2B99CEB0004DD91A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C707A59CDC708DFE83CE7710 /* Pods_calculatorplus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_calculatorplus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBEF2E14AB817B6A34681428 /* Pods-calculatorplusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calculatorplusTests.release.xcconfig"; path = "Target Support Files/Pods-calculatorplusTests/Pods-calculatorplusTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -86,7 +104,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A569E942BA2F30F00353EA2 /* FirebaseDatabase in Frameworks */,
+				9A569E8E2BA2F30F00353EA2 /* FirebaseAnalytics in Frameworks */,
+				9A569E902BA2F30F00353EA2 /* FirebaseAppCheck in Frameworks */,
 				7F9F4E55262C7D8FB11CEDE0 /* Pods_calculatorplus.framework in Frameworks */,
+				9A569E982BA2F30F00353EA2 /* FirebaseStorage in Frameworks */,
+				9A569E922BA2F30F00353EA2 /* FirebaseAuth in Frameworks */,
+				9A569E962BA2F30F00353EA2 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,22 +158,18 @@
 		200735CC2B90C04700C6FC71 /* calculatorplus */ = {
 			isa = PBXGroup;
 			children = (
+				9A569E852BA2B53800353EA2 /* Firebase */,
+				9A569E802BA2A96300353EA2 /* moneyscreen */,
+				9A569E7F2BA2A85200353EA2 /* component */,
+				9A569E7E2BA2A82F00353EA2 /* calculatorscreen */,
+				9A569E7D2BA2A81A00353EA2 /* optionscreen */,
+				9A569E782BA2A7C400353EA2 /* connvertscreen */,
 				9A5F5F2E2B99CE82004DD91A /* base */,
 				200735CD2B90C04700C6FC71 /* AppDelegate.swift */,
 				200735CF2B90C04700C6FC71 /* SceneDelegate.swift */,
-				200735D12B90C04700C6FC71 /* ViewController.swift */,
-				200735D32B90C04700C6FC71 /* Main.storyboard */,
 				200735D62B90C04800C6FC71 /* Assets.xcassets */,
 				200735D82B90C04800C6FC71 /* LaunchScreen.storyboard */,
 				200735DB2B90C04800C6FC71 /* Info.plist */,
-				201D897B2B94B4AC009C9C16 /* CalculatorViewController.swift */,
-				201D897D2B94B4E1009C9C16 /* CalculatorView.storyboard */,
-				9A3CE7252B987282004CF55D /* RoundedCornerView.swift */,
-				9A3CE7272B999744004CF55D /* SideMenuViewController.swift */,
-				9A3CE7292B999A31004CF55D /* SideMenuModel.swift */,
-				9A3CE72B2B999A53004CF55D /* SideMenuCell.swift */,
-				9A3CE72F2B99A48A004CF55D /* SideMenuCell.xib */,
-				9A3CE7312B99AE8C004CF55D /* MainViewController.swift */,
 			);
 			path = calculatorplus;
 			sourceTree = "<group>";
@@ -194,6 +214,80 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		9A569E782BA2A7C400353EA2 /* connvertscreen */ = {
+			isa = PBXGroup;
+			children = (
+				9A569E792BA2A7FB00353EA2 /* ConvertViewController.swift */,
+				9A569E7B2BA2A80B00353EA2 /* ConvertView.storyboard */,
+			);
+			path = connvertscreen;
+			sourceTree = "<group>";
+		};
+		9A569E7D2BA2A81A00353EA2 /* optionscreen */ = {
+			isa = PBXGroup;
+			children = (
+				9A3CE7292B999A31004CF55D /* SideMenuModel.swift */,
+				9A3CE72B2B999A53004CF55D /* SideMenuCell.swift */,
+				9A3CE7312B99AE8C004CF55D /* MainViewController.swift */,
+				9A3CE72F2B99A48A004CF55D /* SideMenuCell.xib */,
+				9A3CE7272B999744004CF55D /* SideMenuViewController.swift */,
+				200735D12B90C04700C6FC71 /* ViewController.swift */,
+				200735D32B90C04700C6FC71 /* Main.storyboard */,
+			);
+			path = optionscreen;
+			sourceTree = "<group>";
+		};
+		9A569E7E2BA2A82F00353EA2 /* calculatorscreen */ = {
+			isa = PBXGroup;
+			children = (
+				201D897B2B94B4AC009C9C16 /* CalculatorViewController.swift */,
+				201D897D2B94B4E1009C9C16 /* CalculatorView.storyboard */,
+			);
+			path = calculatorscreen;
+			sourceTree = "<group>";
+		};
+		9A569E7F2BA2A85200353EA2 /* component */ = {
+			isa = PBXGroup;
+			children = (
+				9A3CE7252B987282004CF55D /* RoundedCornerView.swift */,
+			);
+			path = component;
+			sourceTree = "<group>";
+		};
+		9A569E802BA2A96300353EA2 /* moneyscreen */ = {
+			isa = PBXGroup;
+			children = (
+				9A569E812BA2A98000353EA2 /* MoneyViewController.swift */,
+				9A569E832BA2A98E00353EA2 /* MoneyView.storyboard */,
+			);
+			path = moneyscreen;
+			sourceTree = "<group>";
+		};
+		9A569E852BA2B53800353EA2 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				9A569E872BA2B59A00353EA2 /* Release */,
+				9A569E862BA2B54700353EA2 /* Development */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		9A569E862BA2B54700353EA2 /* Development */ = {
+			isa = PBXGroup;
+			children = (
+				9A569E882BA2B5B400353EA2 /* GoogleService-Info.plist */,
+			);
+			path = Development;
+			sourceTree = "<group>";
+		};
+		9A569E872BA2B59A00353EA2 /* Release */ = {
+			isa = PBXGroup;
+			children = (
+				9A569E8A2BA2E68500353EA2 /* GoogleService-Info .plist */,
+			);
+			path = Release;
+			sourceTree = "<group>";
+		};
 		9A5F5F2E2B99CE82004DD91A /* base */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +313,14 @@
 			dependencies = (
 			);
 			name = calculatorplus;
+			packageProductDependencies = (
+				9A569E8D2BA2F30F00353EA2 /* FirebaseAnalytics */,
+				9A569E8F2BA2F30F00353EA2 /* FirebaseAppCheck */,
+				9A569E912BA2F30F00353EA2 /* FirebaseAuth */,
+				9A569E932BA2F30F00353EA2 /* FirebaseDatabase */,
+				9A569E952BA2F30F00353EA2 /* FirebaseFirestore */,
+				9A569E972BA2F30F00353EA2 /* FirebaseStorage */,
+			);
 			productName = calculatorplus;
 			productReference = 200735CA2B90C04700C6FC71 /* calculatorplus.app */;
 			productType = "com.apple.product-type.application";
@@ -293,6 +395,9 @@
 				Base,
 			);
 			mainGroup = 200735C12B90C04700C6FC71;
+			packageReferences = (
+				9A569E8C2BA2F30F00353EA2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 200735CB2B90C04700C6FC71 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -310,6 +415,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				200735DA2B90C04800C6FC71 /* LaunchScreen.storyboard in Resources */,
+				9A569E8B2BA2E68500353EA2 /* GoogleService-Info .plist in Resources */,
+				9A569E892BA2B5B400353EA2 /* GoogleService-Info.plist in Resources */,
+				9A569E7C2BA2A80B00353EA2 /* ConvertView.storyboard in Resources */,
+				9A569E842BA2A98E00353EA2 /* MoneyView.storyboard in Resources */,
 				201D897E2B94B4E1009C9C16 /* CalculatorView.storyboard in Resources */,
 				200735D72B90C04800C6FC71 /* Assets.xcassets in Resources */,
 				9A3CE7302B99A48A004CF55D /* SideMenuCell.xib in Resources */,
@@ -410,8 +519,10 @@
 				9A3CE72A2B999A31004CF55D /* SideMenuModel.swift in Sources */,
 				9A3CE7262B987282004CF55D /* RoundedCornerView.swift in Sources */,
 				200735D22B90C04700C6FC71 /* ViewController.swift in Sources */,
+				9A569E822BA2A98000353EA2 /* MoneyViewController.swift in Sources */,
 				200735CE2B90C04700C6FC71 /* AppDelegate.swift in Sources */,
 				201D897C2B94B4AC009C9C16 /* CalculatorViewController.swift in Sources */,
+				9A569E7A2BA2A7FB00353EA2 /* ConvertViewController.swift in Sources */,
 				9A5F5F302B99CEB0004DD91A /* BaseViewController.swift in Sources */,
 				9A3CE7282B999744004CF55D /* SideMenuViewController.swift in Sources */,
 				9A3CE7322B99AE8C004CF55D /* MainViewController.swift in Sources */,
@@ -608,7 +719,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.htnguyen.calculatorplus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -639,7 +750,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.htnguyen.calculatorplus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -768,6 +879,50 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9A569E8C2BA2F30F00353EA2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.22.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9A569E8D2BA2F30F00353EA2 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9A569E8C2BA2F30F00353EA2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		9A569E8F2BA2F30F00353EA2 /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9A569E8C2BA2F30F00353EA2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		9A569E912BA2F30F00353EA2 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9A569E8C2BA2F30F00353EA2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		9A569E932BA2F30F00353EA2 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9A569E8C2BA2F30F00353EA2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		9A569E952BA2F30F00353EA2 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9A569E8C2BA2F30F00353EA2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		9A569E972BA2F30F00353EA2 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9A569E8C2BA2F30F00353EA2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 200735C22B90C04700C6FC71 /* Project object */;
 }
