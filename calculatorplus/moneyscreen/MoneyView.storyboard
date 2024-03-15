@@ -4,8 +4,10 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,8 +18,538 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_science" translatesAutoresizingMaskIntoConstraints="NO" id="nan-fA-jD7">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Gq-sZ-OeI">
+                                <rect key="frame" x="16" y="75" width="12.666666666666664" height="22"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="chevron.backward" catalog="system"/>
+                                <connections>
+                                    <action selector="buttonBack:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="sX1-xU-jkc"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jNE-gj-c9i">
+                                <rect key="frame" x="8" y="407" width="377" height="411"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ehb-T4-6kx" userLabel="Expression Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="377" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <color key="highlightedColor" systemColor="secondarySystemBackgroundColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrJ-pU-lO4" userLabel="Result Label">
+                                        <rect key="frame" x="0.0" y="58" width="377" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <color key="highlightedColor" systemColor="secondarySystemBackgroundColor"/>
+                                    </label>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Z4E-is-LRY">
+                                        <rect key="frame" x="0.0" y="112" width="377" height="0.0"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CuH-cX-3f9">
+                                                <rect key="frame" x="0.0" y="0.0" width="69" height="0.0"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="sin" buttonSize="medium">
+                                                    <backgroundConfiguration key="background" cornerRadius="8">
+                                                        <color key="backgroundColor" name="medium_turquoise"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YE4-g1-Ypo">
+                                                <rect key="frame" x="77" y="0.0" width="69" height="0.0"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="cos" buttonSize="medium">
+                                                    <backgroundConfiguration key="background" cornerRadius="8">
+                                                        <color key="backgroundColor" name="medium_turquoise"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hR-3f-jJP">
+                                                <rect key="frame" x="154" y="0.0" width="69" height="0.0"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="tan" buttonSize="medium">
+                                                    <backgroundConfiguration key="background" cornerRadius="8">
+                                                        <color key="backgroundColor" name="medium_turquoise"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7X9-HU-net">
+                                                <rect key="frame" x="231" y="0.0" width="69" height="0.0"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="rad" buttonSize="medium">
+                                                    <backgroundConfiguration key="background" cornerRadius="8">
+                                                        <color key="backgroundColor" name="medium_turquoise"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdU-XA-1ZH">
+                                                <rect key="frame" x="308" y="0.0" width="69" height="0.0"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="deg" buttonSize="medium">
+                                                    <backgroundConfiguration key="background" cornerRadius="8">
+                                                        <color key="backgroundColor" name="medium_turquoise"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zz5-hw-ehr">
+                                        <rect key="frame" x="0.0" y="112" width="377" height="0.0"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oD9-T4-4Nj">
+                                                <rect key="frame" x="0.0" y="0.0" width="69" height="0.0"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="log" buttonSize="medium">
+                                                    <backgroundConfiguration key="background" cornerRadius="8">
+                                                        <color key="backgroundColor" name="medium_turquoise"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0eT-8t-UAT">
+                                                <rect key="frame" x="77" y="0.0" width="69" height="0.0"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="ln" buttonSize="medium">
+                                                    <backgroundConfiguration key="background" cornerRadius="8">
+                                                        <color key="backgroundColor" name="medium_turquoise"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sfp-cq-t3R">
+                                                <rect key="frame" x="154" y="0.0" width="69" height="0.0"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="()" buttonSize="medium">
+                                                    <backgroundConfiguration key="background" cornerRadius="8">
+                                                        <color key="backgroundColor" name="medium_turquoise"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dos-O2-tFY">
+                                                <rect key="frame" x="231" y="0.0" width="69" height="0.0"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="+/-" buttonSize="medium">
+                                                    <backgroundConfiguration key="background" cornerRadius="8">
+                                                        <color key="backgroundColor" name="medium_turquoise"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKD-oL-XWC">
+                                                <rect key="frame" x="308" y="0.0" width="69" height="0.0"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="exp" buttonSize="medium">
+                                                    <backgroundConfiguration key="background" cornerRadius="8">
+                                                        <color key="backgroundColor" name="medium_turquoise"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Q1Q-ez-k3C">
+                                        <rect key="frame" x="0.0" y="115.99999999999999" width="377" height="52.333333333333329"/>
+                                        <subviews>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkp-oE-ihY">
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="52.333333333333336"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="e" buttonSize="medium">
+                                                    <backgroundConfiguration key="background" cornerRadius="8">
+                                                        <color key="backgroundColor" name="medium_turquoise"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Hm-i8-w99">
+                                                <rect key="frame" x="0.0" y="0.0" width="88.333333333333329" height="52.333333333333336"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="C" buttonSize="medium">
+                                                    <backgroundConfiguration key="background" cornerRadius="8">
+                                                        <color key="backgroundColor" name="medium_turquoise"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uu8-1J-n4g">
+                                                <rect key="frame" x="96.333333333333343" y="0.0" width="88.333333333333343" height="52.333333333333336"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="%" buttonSize="medium">
+                                                    <backgroundConfiguration key="background" cornerRadius="8">
+                                                        <color key="backgroundColor" name="medium_turquoise"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3oJ-vm-7jg">
+                                                <rect key="frame" x="192.66666666666666" y="0.0" width="87.999999999999972" height="52.333333333333336"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="delete.backward" catalog="system" title=" " buttonSize="medium">
+                                                    <backgroundConfiguration key="background" cornerRadius="8">
+                                                        <color key="backgroundColor" name="medium_turquoise"/>
+                                                    </backgroundConfiguration>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pen-hf-Bhb">
+                                                <rect key="frame" x="288.66666666666669" y="0.0" width="88.333333333333314" height="52.333333333333336"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="/" buttonSize="medium">
+                                                    <backgroundConfiguration key="background" cornerRadius="8">
+                                                        <color key="backgroundColor" name="medium_turquoise"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MnC-sG-Ob0">
+                                        <rect key="frame" x="0.0" y="176.33333333333337" width="377" height="52.333333333333343"/>
+                                        <subviews>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIn-Vt-Yo3">
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="52.333333333333336"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="π" buttonSize="medium">
+                                                    <backgroundConfiguration key="background" cornerRadius="8">
+                                                        <color key="backgroundColor" name="medium_turquoise"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kR3-Mb-4QN">
+                                                <rect key="frame" x="0.0" y="0.0" width="88.333333333333329" height="52.333333333333336"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="7" buttonSize="medium">
+                                                    <backgroundConfiguration key="background" cornerRadius="8">
+                                                        <color key="backgroundColor" name="medium_turquoise"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUy-t7-ca7">
+                                                <rect key="frame" x="96.333333333333343" y="0.0" width="88.333333333333343" height="52.333333333333336"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="8" buttonSize="medium">
+                                                    <backgroundConfiguration key="background" cornerRadius="8">
+                                                        <color key="backgroundColor" name="medium_turquoise"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ES-53-DIc">
+                                                <rect key="frame" x="192.66666666666666" y="0.0" width="87.999999999999972" height="52.333333333333336"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="9" buttonSize="medium">
+                                                    <backgroundConfiguration key="background" cornerRadius="8">
+                                                        <color key="backgroundColor" name="medium_turquoise"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1q-FR-SRp">
+                                                <rect key="frame" x="288.66666666666669" y="0.0" width="88.333333333333314" height="52.333333333333336"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="x" buttonSize="medium">
+                                                    <backgroundConfiguration key="background" cornerRadius="8">
+                                                        <color key="backgroundColor" name="medium_turquoise"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yd2-x2-HC3">
+                                        <rect key="frame" x="0.0" y="236.66666666666666" width="377" height="52.333333333333343"/>
+                                        <subviews>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLb-Go-0cH">
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="52.333333333333336"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="^" buttonSize="medium">
+                                                    <backgroundConfiguration key="background" cornerRadius="8">
+                                                        <color key="backgroundColor" name="medium_turquoise"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nu-80-bgU">
+                                                <rect key="frame" x="0.0" y="0.0" width="88.333333333333329" height="52.333333333333336"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="4" buttonSize="medium">
+                                                    <backgroundConfiguration key="background" cornerRadius="8">
+                                                        <color key="backgroundColor" name="medium_turquoise"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGV-Xy-qwJ">
+                                                <rect key="frame" x="96.333333333333343" y="0.0" width="88.333333333333343" height="52.333333333333336"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="5" buttonSize="medium">
+                                                    <backgroundConfiguration key="background" cornerRadius="8">
+                                                        <color key="backgroundColor" name="medium_turquoise"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jT9-La-wEn">
+                                                <rect key="frame" x="192.66666666666666" y="0.0" width="87.999999999999972" height="52.333333333333336"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="6" buttonSize="medium">
+                                                    <backgroundConfiguration key="background" cornerRadius="8">
+                                                        <color key="backgroundColor" name="medium_turquoise"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v2e-Xg-8cs">
+                                                <rect key="frame" x="288.66666666666669" y="0.0" width="88.333333333333314" height="52.333333333333336"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="-" buttonSize="medium">
+                                                    <backgroundConfiguration key="background" cornerRadius="8">
+                                                        <color key="backgroundColor" name="medium_turquoise"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GrL-MU-2dk">
+                                        <rect key="frame" x="0.0" y="297" width="377" height="52.333333333333314"/>
+                                        <subviews>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCG-6O-Pcn">
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="52.333333333333336"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="!" buttonSize="medium">
+                                                    <backgroundConfiguration key="background" cornerRadius="8">
+                                                        <color key="backgroundColor" name="medium_turquoise"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ks-Sv-Nfu">
+                                                <rect key="frame" x="0.0" y="0.0" width="88.333333333333329" height="52.333333333333336"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="1" buttonSize="medium">
+                                                    <backgroundConfiguration key="background" cornerRadius="8">
+                                                        <color key="backgroundColor" name="medium_turquoise"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ZJ-B2-cMd">
+                                                <rect key="frame" x="96.333333333333343" y="0.0" width="88.333333333333343" height="52.333333333333336"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="2" buttonSize="medium">
+                                                    <backgroundConfiguration key="background" cornerRadius="8">
+                                                        <color key="backgroundColor" name="medium_turquoise"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsV-Hh-Zzq">
+                                                <rect key="frame" x="192.66666666666666" y="0.0" width="87.999999999999972" height="52.333333333333336"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="3" buttonSize="medium">
+                                                    <backgroundConfiguration key="background" cornerRadius="8">
+                                                        <color key="backgroundColor" name="medium_turquoise"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ct-UW-nVU">
+                                                <rect key="frame" x="288.66666666666669" y="0.0" width="88.333333333333314" height="52.333333333333336"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="+" buttonSize="medium">
+                                                    <backgroundConfiguration key="background" cornerRadius="8">
+                                                        <color key="backgroundColor" name="medium_turquoise"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="k2y-6d-S7g">
+                                        <rect key="frame" x="0.0" y="357.33333333333337" width="377" height="53.666666666666686"/>
+                                        <subviews>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXc-QW-GGu">
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="53.666666666666664"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="√" buttonSize="medium">
+                                                    <backgroundConfiguration key="background" cornerRadius="8">
+                                                        <color key="backgroundColor" name="medium_turquoise"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XhL-vo-YZP">
+                                                <rect key="frame" x="0.0" y="0.0" width="88.333333333333329" height="53.666666666666664"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="00" buttonSize="medium">
+                                                    <backgroundConfiguration key="background" cornerRadius="8">
+                                                        <color key="backgroundColor" name="medium_turquoise"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOi-Oo-JnE">
+                                                <rect key="frame" x="96.333333333333343" y="0.0" width="88.333333333333343" height="53.666666666666664"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="0" buttonSize="medium">
+                                                    <backgroundConfiguration key="background" cornerRadius="8">
+                                                        <color key="backgroundColor" name="medium_turquoise"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qy2-OJ-p0c">
+                                                <rect key="frame" x="192.66666666666666" y="0.0" width="87.999999999999972" height="53.666666666666664"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="." buttonSize="medium">
+                                                    <backgroundConfiguration key="background" cornerRadius="8">
+                                                        <color key="backgroundColor" name="medium_turquoise"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jzj-3A-pZN">
+                                                <rect key="frame" x="288.66666666666669" y="0.0" width="88.333333333333314" height="53.666666666666664"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="=" buttonSize="medium">
+                                                    <backgroundConfiguration key="background" cornerRadius="8">
+                                                        <color key="backgroundColor" name="medium_turquoise"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3eO-Ix-aav">
+                                <rect key="frame" x="16" y="145" width="361" height="80.333333333333314"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFD-xg-KV4">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="30"/>
+                                        <menu key="menu" title="SGD" id="0bx-Yb-lK7">
+                                            <menuOptions key="menuOptions" displayInline="YES" destructive="YES"/>
+                                            <children>
+                                                <command title="SGD" menuElementState="on" id="lWp-Gv-Vi9" userLabel="item1"/>
+                                                <command title="MYR" id="nhy-lT-JTr" userLabel="item1"/>
+                                                <command title="EUR" id="44i-GD-VT4" userLabel="item1"/>
+                                                <command title="USD" id="X7r-mS-rVb" userLabel="item1"/>
+                                                <command title="AUD" id="EIn-Pa-MsS" userLabel="item1"/>
+                                                <command title="JPY" discoverabilityTitle="" id="EZe-HV-x34" userLabel="item1"/>
+                                                <command title="CNH" id="OCc-5g-S7h" userLabel="item1"/>
+                                                <command title="HKD" id="6K3-Y6-SJQ" userLabel="item1"/>
+                                                <command title="CAD" id="fFp-g6-3Fd" userLabel="item1"/>
+                                                <command title="INR" id="x0L-rk-MXb" userLabel="item1"/>
+                                                <command title="DKK" id="XHE-tA-tRS" userLabel="item1"/>
+                                                <command title="GBP" id="w6M-gc-ceh" userLabel="item1"/>
+                                                <command title="RUB" id="C2y-6x-dlq" userLabel="item1"/>
+                                                <command title="NZD" id="Dh5-mg-rCU" userLabel="item1"/>
+                                                <command title="MXN" id="uYG-hv-CK1" userLabel="item1"/>
+                                                <command title="IDR" id="sqM-zg-zNJ" userLabel="item1"/>
+                                                <command title="TWD" id="t2d-pF-cYA"/>
+                                                <command title="THB" id="QfJ-4J-0bb" userLabel="item1"/>
+                                                <command title="VND" id="zSx-Cd-jd9" userLabel="item1"/>
+                                            </children>
+                                        </menu>
+                                        <state key="normal" title="SGD"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2IE-sy-5yR">
+                                        <rect key="frame" x="0.0" y="30" width="361" height="30"/>
+                                        <menu key="menu" id="x1O-c1-GD4">
+                                            <children>
+                                                <command title="VND" id="OYW-4e-Ghc" userLabel="item1"/>
+                                                <command title="EUR" id="VXQ-vN-pzS" userLabel="item1"/>
+                                                <command title="SGD" menuElementState="on" id="AAJ-uD-RIY" userLabel="item1"/>
+                                                <command title="CNH" id="Ohq-Zk-6W4" userLabel="item1"/>
+                                                <command title="NZD" id="zCj-VT-agj" userLabel="item1"/>
+                                                <command title="JPY" discoverabilityTitle="" id="cfS-zd-JOA" userLabel="item1"/>
+                                                <command title="GBP" id="bcb-6P-GHk" userLabel="item1"/>
+                                                <command title="CAD" id="kGf-t4-VBm" userLabel="item1"/>
+                                                <command title="MYR" id="677-VX-gJF" userLabel="item1"/>
+                                                <command title="RUB" id="M0s-vA-Jxy" userLabel="item1"/>
+                                                <command title="THB" id="Y7h-lB-Wcc" userLabel="item1"/>
+                                                <command title="USD" id="VAs-jZ-8Qe" userLabel="item1"/>
+                                                <command title="INR" id="aQV-TZ-nqz" userLabel="item1"/>
+                                                <command title="AUD" id="AHJ-YU-efc" userLabel="item1"/>
+                                                <command title="DKK" id="Sd4-ca-MPe" userLabel="item1"/>
+                                                <command title="MXN" id="aB8-FW-fSC" userLabel="item1"/>
+                                                <command title="IDR" id="EMc-qZ-Gng" userLabel="item1"/>
+                                                <command title="HKD" id="b8y-on-ylb" userLabel="item1"/>
+                                                <command title="TWD" id="UgQ-fA-HyP"/>
+                                            </children>
+                                        </menu>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tek-Sq-CdM">
+                                        <rect key="frame" x="0.0" y="60.000000000000007" width="361" height="20.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jNE-gj-c9i" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="1J6-H4-SdJ"/>
+                            <constraint firstItem="nan-fA-jD7" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="2k6-nf-cyP"/>
+                            <constraint firstAttribute="bottom" secondItem="nan-fA-jD7" secondAttribute="bottom" id="LCl-Bd-fJl"/>
+                            <constraint firstItem="3Gq-sZ-OeI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="May-c1-uBG"/>
+                            <constraint firstItem="3eO-Ix-aav" firstAttribute="top" secondItem="3Gq-sZ-OeI" secondAttribute="bottom" constant="48" id="NpE-YN-Kiw"/>
+                            <constraint firstItem="3Gq-sZ-OeI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="SXf-NW-cHj"/>
+                            <constraint firstItem="nan-fA-jD7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="XRw-Er-8cc"/>
+                            <constraint firstAttribute="trailing" secondItem="jNE-gj-c9i" secondAttribute="trailing" constant="8" id="deh-FE-G6a"/>
+                            <constraint firstItem="3eO-Ix-aav" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="gPp-kC-gb9"/>
+                            <constraint firstItem="nan-fA-jD7" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="ndN-MA-vxL"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="jNE-gj-c9i" secondAttribute="bottom" id="tbf-nm-0kp"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="3eO-Ix-aav" secondAttribute="trailing" constant="16" id="zIt-aR-t4B"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -26,6 +558,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="background_science" width="1080" height="1920"/>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
+        <image name="delete.backward" catalog="system" width="128" height="102"/>
+        <namedColor name="medium_turquoise">
+            <color red="0.20900000631809235" green="0.20499999821186066" blue="0.20499999821186066" alpha="0.60000002384185791" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
